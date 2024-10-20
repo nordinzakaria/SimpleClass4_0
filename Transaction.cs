@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 public class Transaction
 {
     private int val;
-    private Date date;
+    private DateTime date;
 
     public Transaction() { }
-    public Transaction(int val, Date date)
+    public Transaction(int val, DateTime date)
     {
         this.val = val;
         this.date = date;
     }
     
     public void SetVal(int val) { this.val = val; }
-    public void SetDate(Date date) { this.date = date; }
+    public void SetDate(DateTime date) { this.date = date; }
     public int GetVal() { return val; }
-    public Date GetDate() { return date; }
+    public DateTime GetDate() { return date; }
 
 }

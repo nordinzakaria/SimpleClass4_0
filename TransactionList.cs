@@ -23,14 +23,14 @@ public class TransactionList
 
         for (int i = 0; i < num; i++)
         {
-            Console.Write(" Enter Val, Day, Month, Year: ");
+            Console.WriteLine(" Enter Val, Day, Month, Year: ");
             string val = Console.ReadLine();
             string day = Console.ReadLine();
             string month = Console.ReadLine();
             string year = Console.ReadLine();
 
             Transaction tr = new Transaction(int.Parse(val), 
-                            new Date(int.Parse(day), int.Parse(month), int.Parse(year)));
+                            new DateTime(int.Parse(year), int.Parse(month), int.Parse(day)));
             Add(tr);
         }
 
@@ -42,9 +42,9 @@ public class TransactionList
         for (int i = 0; i < transactions.Count; i++)
         {
             Console.WriteLine("Val: " + transactions[i].GetVal());
-            Console.WriteLine("Day: " + transactions[i].GetDate().GetDay());
-            Console.WriteLine("Month: " + transactions[i].GetDate().GetMonth());
-            Console.WriteLine("Year: " + transactions[i].GetDate().GetYear());
+            Console.WriteLine("Day: " + transactions[i].GetDate().Day);
+            Console.WriteLine("Month: " + transactions[i].GetDate().Month);
+            Console.WriteLine("Year: " + transactions[i].GetDate().Year);
         }
     }
 
